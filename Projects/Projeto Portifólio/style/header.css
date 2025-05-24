@@ -1,0 +1,145 @@
+header {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+header > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 0;
+}
+
+/* Primeira section */
+
+.primary-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 80px;
+  margin: 5rem 0;
+}
+
+.primary-section > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* icons-section */
+
+.icons-section ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+}
+
+.icons-section ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--gray-300);
+  height: 40px;
+  padding: 13px;
+  border-radius: 20px;
+}
+
+/* Titulo */
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.title-section span {
+  color: var(--red);
+}
+
+.title-section + p {
+  font: var(--subtitle);
+  color: var(--gray-500);
+}
+
+.title-section h1 {
+  font: var(--title-lg-asap);
+  color: var(--gray-600);
+  margin-bottom: 0.5rem;
+}
+
+.title-section h1 + p {
+  font: var(--text-sm-asap);
+  color: var(--gray-400);
+  width: 49rem;
+}
+
+/* Imagem de perfil */
+
+.img-perfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  border: 3px solid var(--red);
+  box-sizing: border-box;
+}
+
+#img {
+  width: 6.5rem;
+  height: 6.5rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 4px solid var(--gray-200);
+}
+
+#icon-perfil {
+  position: absolute;
+  top: 4.6rem;
+  left: 4.5rem;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+@media (max-width: 1024px) {
+  .title-section h1 + p {
+    font: var(--text-sm-asap);
+    width: 90%;
+  }
+  header > img {
+    object-fit: inherit;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-section h1 {
+    font: var(--title-md-asap);
+  }
+  .title-section h1 + p {
+    font: var(--text-sm-asap);
+  }
+  .title-section {
+    margin-top: 1rem;
+  }
+  .title-section + p {
+    font: var(--text-sm-asap);
+  }
+  header > img {
+    object-fit: inherit;
+  }
+}

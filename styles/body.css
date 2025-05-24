@@ -1,0 +1,73 @@
+body {
+  background-color: var(--color-rose-5);
+  color: var(--color-rose-1);
+  font: var(--title-md);
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.background img {
+  position: absolute;
+  height: auto;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Nuvem no canto superior esquerdo */
+.cloud-1 {
+  width: 40%;
+  top: 2rem;
+  left: -8%;
+  animation-delay: 0s;
+}
+
+/* Nuvem no canto superior direito */
+.cloud-2 {
+  width: 30%;
+  top: 30%;
+  right: -10%;
+  animation-delay: 2s;
+}
+
+/* Nuvem no canto inferior esquerdo */
+.cloud-3 {
+  width: 35%;
+  top: 50%;
+  left: -10%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1280px) {
+  .cloud-1 {
+    width: 25%;
+  }
+  .cloud-2 {
+    width: 15%;
+    right: 0;
+  }
+  .cloud-3 {
+    top: 60%;
+    width: 20%;
+    left: 5rem;
+  }
+}

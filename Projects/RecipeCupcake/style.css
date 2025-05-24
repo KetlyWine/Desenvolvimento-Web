@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alice", sans-serif;
+  size: 10px;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#container::before {
+  content: "";
+  background-image: url("Assets/main-image.png");
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  filter: blur(10px);
+  z-index: -2;
+}
+
+#container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(102, 66, 33, 0.5); /* cor escura transparente */
+  z-index: -1;
+}
+
+#recive-content {
+  color: #291b1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60rem;
+  position: relative;
+  background-color: #f0e8c2;
+  margin-top: 4rem;
+  gap: 1.5rem;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  border-radius: 1.5rem;
+}
+
+#recive-content img {
+  width: 100%;
+  border-radius: 1.3rem;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 140%;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  line-height: 140%;
+}
+
+.section-container p,
+.section-container ul {
+  font-size: 1.25rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.6rem;
+  text-align: justify;
+}
+
+.section-container {
+  position: relative;
+  width: 90%;
+  overflow: hidden;
+}
+
+.section-container ul {
+  padding-left: 1.1rem;
+}
+
+footer {
+  font-weight: bold;
+  margin: 2rem;
+  padding: 0.5rem;
+}
+
+footer p {
+  color: #f0e8c2;
+}
+
+footer img {
+  position: relative;
+  top: 0.2rem;
+}
+
+/* Celulares */
+@media (max-width: 575px) {
+  #recive-content {
+    width: 90%;
+  }
+  .section-container p,
+  .section-container ul {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.2rem;
+    text-align: justify;
+  }
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 576px) and (max-width: 1200px) {
+  #recive-content {
+    width: 80%;
+  }
+  .section-container p,
+  .section-container ul {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    line-height: 1.2rem;
+    text-align: justify;
+  }
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
