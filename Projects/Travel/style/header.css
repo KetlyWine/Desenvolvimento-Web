@@ -1,0 +1,28 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.info {
+  display: flex;
+  gap: 32px;
+  width: 60%;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 16px;
+}
+
+header ul li {
+  display: flex;
+  gap: 8px;
+}
+
+#list {
+  width: 30%;
+}
